@@ -6,7 +6,7 @@ services:
     ports:
       - "6603:3306"
     volumes:
-      - /data/db/mysql:/var/lib/mysql
+      - ./data/db/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: symfony
