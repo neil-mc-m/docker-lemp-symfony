@@ -23,6 +23,7 @@ services:
     volumes:
         - ./symfony:/var/www/symfony:cached
         - ./logs/symfony:/var/www/symfony/var/log:cached
+        - ./php-fpm/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
     depends_on:
         - db
     networks:

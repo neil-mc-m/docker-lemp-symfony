@@ -9,6 +9,8 @@ RUN echo "upstream php-upstream { server php:9000; }" > /etc/nginx/conf.d/upstre
 
 RUN adduser -D -g '' -G www-data www-data
 
+RUN chown -R www-data:www-data /var/lib/nginx /var/tmp/nginx
+
 CMD ["nginx"]
 
 EXPOSE 80
